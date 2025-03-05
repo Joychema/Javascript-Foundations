@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+// <!-- Functions are the main “building blocks” of the program.  -->
+// <!-- They allow the code to be called many times without repetition. -->
+ function name(Parameter1, Parameter2, Parameter3){
+    //body of the function
+ }
+ name (); //this is how you call a function
+
+//local variables- these are variables stored inside the function and can only be accessed inside the function
+//global variables- these are variables stored outside the function and can be accessed anywhere in the program
+
+function showMessage(){
+    let userName = "Hellen"; //local variable
+    let message = "Hello, " + userName;
+    console.log(message);
+}
+showMessage();
+
+// a parameter is a value inside the parentheses when the function is declared
+// an argument is a value inside the parentheses when the function is called
+
+function convo(from, text) { //parameter
+    console.log(from + ": " + text);
+}
+convo("Ann", "Hello! How are you?"); //argument
+
+// naming functions
+// showMessage(..)     // shows a message
+// getAge(..)          // returns the age (gets it somehow)
+// calcSum(..)         // calculates a sum and returns the result
+// createForm(..)      // creates a form (and usually returns it)
+// checkPermission(..) // checks a permission, returns true/false
+
+//function expression - a function can be created and assigned to a variable
+let sayHi = function(){
+    console.log("Hello");
+}
+sayHi();
+
+
+//arrow functions - a shorter syntax for a function expression
+let sum = (a, b) => a + b;
+console.log(sum(1, 2));
+
+let sayHello = () => console.log("Hello");
+sayHello();
+
+let add7 = a => a + 7;
+console.log(add7(3));
+let multiply = (a, b) => a * b;
+console.log(multiply(2, 3));
+// function capitalize(str){
+    // return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+let capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+console.log(capitalize("hello"));
+let lastletter = str => str.charAt(str.length - 1);
+console.log(lastletter("hello"));
+</script>
+

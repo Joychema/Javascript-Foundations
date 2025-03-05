@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <label for="calendar">--Select month:--</label>
+<select name="calendar" id="calendar">
+    <option value="Jan">January</option>
+    <option value="Feb">February</option>
+    <option value="Mar">March</option>
+    <option value="Apr">April</option>
+    <option value="May">May</option>
+    <option value="Jun">June</option>
+    <option value="Jul">July</option>
+    <option value="Aug">August</option>
+    <option value="Sep">September</option>
+    <option value="Oct">October</option>
+</select>
+<h1> month</h1> -->
+
+    <script>
+        //javascript code
+        console.log("Hello World");// is the command to print something to the developer console in your browser
+        
+        let name="JOHN"; //variable declaration
+        let surname="DOE";
+        console.log(name);
+        console.log(surname);
+
+        age=25;
+        console.log(age);
+        //reassigning variables
+        age=40;
+        console.log(age);
+
+        const pi=3.14;
+        console.log(pi);
+
+        // pi=14; //this will throw an error because you cannot reassign a constant variable
+        // console.log(pi);
+
+        // So in summary, there are two ways to declare a variable:
+
+        // let, which we can re-assign.
+        // const which we can’t re-assign and will throw an error if we try.
+
+        // numbers
+        3+2;
+        console.log(23+97);
+        (4+5+6+7+8+9);
+        console.log((4 + 6 + 9) / 77);
+
+        let a=6;
+        console.log(a);
+        a=16;
+        console.log(a);
+        let b=10 * a;
+        console.log(b);
+        const max=57;
+        const actual=max-13;
+        const percentage=(actual/max);
+        console.log(percentage);
+
+        // the binary plus vs the unary plus
+        // The binary plus is used to add two numbers together, 
+        // while the unary plus is used to convert a string to a number.
+        let apples="2";
+        let oranges="3";
+
+        console.log(apples+oranges); //this will alert 23 because the binary plus is used to concatenate the two strings
+        console.log(+apples + +oranges); //this will alert 5 because the unary plus is used to convert the strings to numbers
+
+        // strings
+        const string="Hello, World!";
+        console.log(string);
+        /*
+        const badString1=i am a string; //this will throw an error because the string is not enclosed in quotes
+        const badString2='i am a string; 
+        const badString3=i am a string';
+
+        console.log(badString1);
+        console.log(badString2);
+        console.log(badString3); */
+
+        // In JavaScript, you can choose single quotes ('), double quotes ("), 
+        // or backticks (`) to wrap your strings in. All of the following will work:
+
+        // Strings declared using backticks are a special kind of string called a template literal.
+        //  These strings can contain placeholders, which are indicated by the dollar sign and curly braces (${expression}).
+        const one="Hello, ";
+        const two="How are you?";
+        const joined= `${one} ${two}`;
+        console.log(joined);
+        // joining strings like this is called concatenation
+
+        // numbers vs strings
+        const myNum1=234;
+        const myString2= String(myNum1); //the String() function converts a number to a string
+        console.log(typeof myString2);
+
+        const myString="234";
+        const myNum=Number(myString); //the Number() function converts a string to a number
+        console.log(typeof myNum);
+
+        //conditional statements
+        if (3<10){
+            console.log('This is true!');
+            } else {
+                console.log('This is false!');
+            }
+        
+        const time=20;
+        if (time < 10){                 //if the time is less than 10
+            greeting ="Good morning";
+        } else if (time < 20){         //if the   time is less than 20
+            greeting="Good day";
+        } else{                        //if the time is greater than 20
+            greeting="Good evening";
+        }
+        console.log(greeting);
+
+    //    if (age (!14) && age > (!90));
+
+    //    login
+    // let who= prompt("Who is there? ", '');
+    // let password= "TheMaster";
+    // if (who === "Admin");{
+    //     prompt("Enter your password: ");
+    // } if (who === "Admin" && password === "TheMaster"){
+    //     console.log("Welcome!😃")
+    // } else if (who === "Admin" && password !== "TheMaster"){
+    //     console.log("Wrong password!😕")
+    // } else if (who !== "Admin"){
+    //     console.log("I don't know you!🙄")
+    // } else (who === null || password === null);{
+    //     console.log("Canceled!😐")
+    // }
+    
+    //conditional operator
+    // let Age=prompt("age?", 18);
+    // let message= (age < 3)? "Hi, baby!":
+    // (age <18)? "Hello!":
+    // (age< 100)? "Greetings!":
+    // "What an unusual age!";
+
+    // console.log(message);
+        // ? can be used as a shorthand for an if statement.
+    // let company = prompt('Which company created JavaScript?', '');
+    // (company=='Netscape') ?
+    // alert('Right!') : alert('Wrong.');
+
+    // let company = 'Netscape';
+    // let user = prompt('Which company created JavaScript?', '');
+
+    // if (company == user){
+    //     alert('Right!');
+    // }else{
+    //     alert('Wrong.');
+    // }
+
+    // 
+    
+    // let value=prompt('Input a number: ', '');
+    // (value > 0) ? alert(1): (value < 0) ? alert(-1): value == 0 ? alert(0): alert('Invalid Input!');
+    
+    // let login=prompt('Who are you?', '');
+    // let message= (login == 'Employee')? 'Hello':
+    // (login == 'Directoe') ? 'Greetings':
+    // (login == '') ? 'No login':
+    // '';
+    // console.log(message);
+
+    // switch statement
+    // let browser=prompt('What browser are you using?', ''); //prompt the user to input the browser they are using
+    // if (browser == 'Edge'){
+    //     alert('You have got the Edge!');
+    // } else if (browser == 'Chrome' 
+    // || browser == 'Firefox'
+    // || browser == 'Safari' 
+    // || browser == 'Opera'){
+    //         alert('Okay we support these browsers too!');
+    //     }else{
+    //         alert('We hope that this page looks ok!');
+    //     }
+
+    // let A = +prompt('A?', ''); //prompt the user to input a number
+    // switch(A){
+    //     case 0:
+    //         alert(0);
+    //         break;
+    //     case 1:
+    //         alert(1);
+    //         break;
+    //     case 2:
+    //     case 3:
+    //         alert('2,3');
+    //         break;
+    // }
+// functions -reusable blocks of code that perform a specific task
+     function favouriteAnimal(pet)/*parameter is always inside the parenthesis*/ {
+            "My favourite animal is a " + pet;
+     }
+        console.log(favouriteAnimal("cat")); //an argument is then the value passed when calling an argument
+
+     function myGreeting(){
+        console.log("Good Evening!")
+     }
+
+     myGreeting(); //this is how you call a function
+
+     //anonymous function
+        // function logkey(event){
+        //     console.log(`You pressed "$(event.key)".`)
+        // }
+        // textBox.addEventListener('keydown', logkey);  //the name of the event to listen for, which in this case is keydown
+                                                      // a function to run when the event happens. Instead of defining a separate logKey() function, 
+                                                    //   you can pass an anonymous function into addEventListener():
+        // textBox.addEventListener('keydown', function(event)){
+        //     console.log('You pressed "$(event.key)".');
+        // }
+
+        
+    </script>
+
+    <script type="module" src="myscript.js"></script>  <!-- this is how you link an external javascript file to your html file -->
+
+
+<!-- variables-These are the building blocks of any program,  -->
+ <!-- you can think of variables as “storage containers” for data in your code -->
+</body>
+</html>
