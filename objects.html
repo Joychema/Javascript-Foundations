@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+     <!-- objects store properties (key-value pairs), where: -->
+
+<!-- Property keys must be strings or symbols (usually strings). -->
+<!-- Values can be of any type. -->
+
+    <script>
+        let user ={       // an object
+            name: "Kevin",    // by key "name" store value "John"
+            age: 25,          // by key "age" store value 30
+            // "Loves God": true // multiword key
+        };
+        //lets get the values of the object
+        console.log(user.name);
+        console.log(user.age);
+        user.isAdmin = true; // add a new key value pair
+        console.log(user.isAdmin);
+        delete user.isAdmin; // delete a key value pair
+        user ["Loves God"] = true; //square brackets can be used to access multiword keys
+        console.log(user["Loves God"]); //accessing multiword keys using square brackets
+
+        // let key = prompt("What do you want to know about the user?", "name");
+        // console.log(user[key]); //accessing keys using variables
+
+        //property existence in test
+        console.log('name' in user); //true
+        console.log('no' in user); //false
+
+        //for in loop
+        for (let key in user){
+            console.log(key); //name, age, Loves God
+            console.log(user[key]); //Kevin, 25, true
+        }
+
+        let pers = {
+            name:"John",
+            surname:"Smith",
+            age:30,
+        }
+        pers.name="Pete"; //change the value of the name key
+        console.log(pers.name);
+        for (let prop in pers){
+            console.log(pers[prop]);
+        }
+        delete pers.name; //delete the name key
+
+        //arrays
+        function SumofTripledEvens(array){
+            let sum = 0;
+            for (let i=0; i<array; i++){
+                //check if the number is even
+                if (array[i] % 2 === 0){
+                    //if it is even, triple it
+                    const tripledNumber = array[i]*3;
+                    //add the tripled number to the sum
+                    sum += tripledNumber;
+                }
+                return sum;
+            }
+
+        }
+        console.log(SumofTripledEvens());
+
+        //map
+        function addOne(num){
+            return num += 1;
+        }
+        const numbers = [1,2,3,4,5];
+        const mappedNumbers = numbers.map(addOne); //addOne is a callback function and the map.() method 
+        // calls it on each element of the array and returns a new array with the results without changing the original array
+        console.log(mappedNumbers);
+
+        //filter method loops through an array much like map() but instead of returning a new array, 
+        // it returns a new array with only the elements that pass the test
+
+        function isEven(num){
+            return num % 2 === 0;
+        }
+        const arr = [1,2,3,4,5,6,7,8,9,10];
+        const evenNumbers = arr.filter(isEven);
+        console.log(evenNumbers);
+
+        //reduce method takes a callback function with two parameters (accumulator and currentValue)
+       const array = [1,2,3,4,5];
+       const tripledNumbers = array.reduce((total, currentItem) => {
+              return total * currentItem;
+       }, 1);
+         console.log(tripledNumbers);
+
+         function SumofTripledEvens(array){
+            const numb = [1,2,3,4,5];
+            const sum = numb.filter(num => num % 2 === 0).map(num => num * 3).reduce((total, num) => total + num, 0);
+            return sum;
+        }
+        console.log(SumofTripledEvens());
+         
+
+    </script>
+</body>
+</html>
