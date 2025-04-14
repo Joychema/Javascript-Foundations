@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="font-style.css">
+    <!-- <style>
+        /* Retro Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Special Elite', cursive;
+            background-color: #f5e1c8;
+            color: #4b3f34;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffefd5;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            border: 3px solid #9c6644;
+        }
+
+        h1, h2 {
+            color: #6d4c41;
+        }
+
+        h1 {
+            font-size: 2rem;
+            border-bottom: 3px solid #6d4c41;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Form Sections */
+        section {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        fieldset {
+            border: 2px solid #6d4c41;
+            padding: 1rem;
+            border-radius: 8px;
+            position: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        input, .txt{
+          flex-direction: row-reverse;
+          gap: 5px;
+        }
+
+        legend {
+            position: absolute;
+            /* bottom: 0;
+            right: 0; */
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        label {
+            font-weight: bold;
+            display: flex;
+            margin-bottom: 0.3rem;
+            position: relative;
+            gap: 16px;
+            align-items: center;
+        }
+
+        input, select {
+            width: calc(100% - 10px);
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 2px solid #9c6644;
+            border-radius: 5px;
+            background-color: #f4e4d7;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #a45c40;
+            box-shadow: 0px 0px 5px rgba(164, 92, 64, 0.8);
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #6d4c41;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #9c6644;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            form {
+                max-width: 90%;
+            }
+            input, select, button {
+                font-size: 1rem;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    
+    <!-- <form action="/my-handling-form-input" method="post">
+        <p>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="user_name"/>
+        </p>
+        <p>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email">
+        </p>
+        <p>
+            <label for="message">message:</label>
+            <textarea id="message" name="user_message"></textarea>
+        </p>
+        <p class="button">
+            <button type="submit">Submit my message</button>
+        </p>
+    </form>
+    <br><br>
+
+    <form action="">
+        <h1>Payment Form</h1>
+        <p>
+            Required fields are followed by
+            <strong><span aria-label="Required">*</span></strong>
+        </p>
+        <section>
+          <h2>Contact Information</h2>
+          <fieldset>
+            <legend>Title</legend>
+            <ul>
+              <li>
+                <label for="title_1">
+                  <input type="radio" id="title_1" name="title" value="A" class="txt">
+                  Ace
+                </label>
+              </li>
+              <li>
+                <label for="title_1">
+                  <input type="radio" id="title_1" name="title" value="K" class="txt">
+                  King
+                </label>
+              </li>
+              <li>
+                <label for="title_1">
+                  <input type="radio" id="title_1" name="title" value="Q" class="txt">
+                  Queen
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <p>
+            <label for="name">
+              <span>Name:</span>
+              <strong><span aria-label="Required">*</span></strong>
+            </label>
+            <input type="text" id="name" name="username" required>
+          </p>
+          <p>
+            <label for="mail">
+              <span>Email:</span>
+              <strong><span aria-label="Required">*</span></strong>
+            </label>
+            <input type="email" id="mail" name="useremail" required>
+          </p>
+          <p>
+            <label for="pwd">
+              <span>password:</span>
+              <strong><span aria-label="Required">*</span></strong>
+            </label>
+            <input type="password" id="pwd" name="userpwd" required>
+          </p>
+        </section>
+        <section>
+          <h2>Payment information</h2>
+          <p>
+            <label for="card">
+              <span>Card type:</span>
+            </label>
+            <select id="card" name="user-card">
+              <option value="visa">Visa</option>
+              <option value="mc">Mastercard</option>
+              <option value="amex">American Express</option>
+            </select>
+          </p>
+          <p>
+            <label for="number">
+              <span>Card number:</span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input type="tel" id="number" name="card-number" required />
+          </p>
+          <p>
+            <label for="expiration">
+              <span>Expiration date:</span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input
+              type="text"
+              id="expiration"
+              name="expiration"
+              required
+              placeholder="MM/YY"
+              pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+          </p>
+        </section>
+
+        <section>
+          <h2>Billing address</h2>
+          <p>
+            <label for="address">
+              <span>Street address:</span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input type="text" id="address" name="address" required />
+          </p>
+          <p>
+            <label for="city">
+              <span>City:</span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input type="text" id="city" name="city" required />
+          </p>
+          <p>
+            <label for="state">
+              <span>State:</span>
+              <strong><span aria-label="required">*</span></strong>
+            </label>
+            <input type="text" id="state" name="state" required />
+          </p>
+          <section>
+            <p>
+              <button type="submit">Validate my Payment</button>
+            </p>
+          </section>
+    </form> -->
+    <form>
+      <h1>to: Mozilla</h1>
+    
+      <div id="from">
+        <label for="name">from:</label>
+        <input type="text" id="name" name="user_name" />
+      </div>
+    
+      <div id="reply">
+        <label for="mail">reply:</label>
+        <input type="email" id="mail" name="user_email" />
+      </div>
+    
+      <div id="message">
+        <label for="msg">Your message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+    
+      <div class="button">
+        <button type="submit">Send your message</button>
+      </div>
+    </form>
+    
+</body>
+</html>

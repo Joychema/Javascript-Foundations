@@ -1,0 +1,74 @@
+/* html {
+    font-family: sans-serif;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+  }
+  
+  caption {
+    padding: 10px;
+  }
+  tbody {
+    font-size: 95%;
+    font-style: italic;
+  }
+  
+  tfoot {
+    font-weight: bold;
+  } */
+  
+  td, th {
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid #ccc;
+    text-align: center;
+
+  }
+  th {
+    background: lightblue;
+    border-color: white;
+  }
+  body {
+    padding: 1rem;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  /* zebra stripping  */
+  tbody tr:nth-child(odd) {
+    background: #f0f0f0;
+  }
+  /* highlighting a row */
+  .highlight {
+    background: yellow;
+  }
+  /* highlighting a cell on hover */
+  td:hover {
+    background: lightgreen;
+  }
